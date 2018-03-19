@@ -7,37 +7,37 @@ import static org.junit.Assert.assertEquals;
 
 public class TestName {
 
-    private ArrayList<String> names;
+    private ArrayList<String> namelist;
 
         @Before
         public void before() {
-            ArrayList<String> names = new ArrayList<>();
-            names.add("Mark");
-            names.add("Gary");
-            names.add("Jason");
-            names.add("Howard");
-            names.add("Robbie");
+            ArrayList<String> namelist = new ArrayList<>();
+            namelist.add("Mark");
+            namelist.add("Gary");
+            namelist.add("Jason");
+            namelist.add("Howard");
+            namelist.add("Robbie");
         }
 
         @Test
         public void hasNames() {
-            assertEquals(5,names.size());
+            assertEquals(5, namelist.size());
         }
 
         @Test
         public void canAddMoreNames() {
-            names.add("Take That");
-            assertEquals(6, names.size());
+            namelist.add("Take That");
+            assertEquals(6, namelist.size());
         }
 
         @Test
         public void canDeleteNames() {
-            names.remove(0);
-            assertEquals(5, names.size());
+            namelist.remove(0);
+            assertEquals(5, namelist.size());
         }
 
         @Test
-        public void canFindNameByIndex() {
-            assertEquals("Jason", names.get(1));
+        public void canFindByIndex() {
+            assertEquals("Jason", namelist.get(1));
         }
 }

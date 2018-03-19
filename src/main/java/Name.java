@@ -5,7 +5,7 @@ public class Name {
     private ArrayList<String> names;
 
     public Name() {
-        ArrayList<String> names = new ArrayList<>();
+        this.names = new ArrayList<>();
     }
 
     public ArrayList<String> getNames() {
