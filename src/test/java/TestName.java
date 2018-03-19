@@ -41,22 +41,17 @@ public class TestName {
             assertEquals("Jason", namelist.get(2));
         }
 
-        @Test
-        public void testRandomise() {
-            String result = null;
-            ArrayList<String> acceptedvalues = new ArrayList<>();
-
-               acceptedvalues.add("Mark");
-               acceptedvalues.add("Gary");
-               acceptedvalues.add("Jason");
-               acceptedvalues.add("Howard");
-               acceptedvalues.add("Robbie");
-
-            result = namelist.randomise();
-            assertEquals(true, acceptedvalues.contains(result));
-        }
-
-
-
-    }
+//        @Test
+//        public void testRandomise() {
+//            String result = null;
+//            ArrayList<String> acceptedvalues = new ArrayList<>();
+//               acceptedvalues.add("Mark");
+//               acceptedvalues.add("Gary");
+//               acceptedvalues.add("Jason");
+//               acceptedvalues.add("Howard");
+//               acceptedvalues.add("Robbie");
+//
+//            result = namelist.randomise();
+//            assertEquals(true, acceptedvalues.contains(result));
+//        }
 }
