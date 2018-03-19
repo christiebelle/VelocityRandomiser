@@ -19,7 +19,6 @@ public class RandomiserController {
 
             get("/randomiser", (req,res)->{
                 Collections.shuffle(names);
-                return names.get(0);
                 HashMap<String, Object> model = new HashMap<>();
                 model.put("names", names);
                 model.put("template", "names.vtl");
