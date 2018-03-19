@@ -43,8 +43,8 @@ public class TestName {
 
         @Test
         public void testRandomise() {
-
-
-            assertEquals(true, acceptedvalues.contains(result));
+            Name acceptedvalues = new Name();
+            String result = acceptedvalues.randomise();
+            assertEquals(true, result.contains(acceptedvalues));
         }
 }
