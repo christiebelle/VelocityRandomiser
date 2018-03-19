@@ -11,7 +11,7 @@ public class TestName {
 
         @Before
         public void before() {
-            ArrayList<String> namelist = new ArrayList<>();
+            namelist = new ArrayList<>();
             namelist.add("Mark");
             namelist.add("Gary");
             namelist.add("Jason");
@@ -33,11 +33,11 @@ public class TestName {
         @Test
         public void canDeleteNames() {
             namelist.remove(0);
-            assertEquals(5, namelist.size());
+            assertEquals(4, namelist.size());
         }
 
         @Test
         public void canFindByIndex() {
-            assertEquals("Jason", namelist.get(1));
+            assertEquals("Jason", namelist.get(2));
         }
 }
