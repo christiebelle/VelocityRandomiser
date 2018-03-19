@@ -6,6 +6,12 @@ public class Name {
 
     public Name() {
         this.names = new ArrayList<>();
+        names.add("Hugh");
+        names.add("Pew");
+        names.add("Barney McGrew");
+        names.add("Cuthbert");
+        names.add("Dibble");
+        names.add("Grub");
     }
 
     public ArrayList<String> getNames() {
