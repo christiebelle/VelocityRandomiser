@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Name {
 
@@ -7,7 +8,7 @@ public class Name {
     public Name() {
         this.names = new ArrayList<>();
         names.add("Hugh");
-        names.add("Pew");
+        names.add("Pugh");
         names.add("Barney McGrew");
         names.add("Cuthbert");
         names.add("Dibble");
@@ -24,5 +25,10 @@ public class Name {
 
     public String find(int index){
         return names.get(index);
+    }
+
+    public String randomiser(){
+        Collections.shuffle(names);
+        return names.get(0);
     }
 }

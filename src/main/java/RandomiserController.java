@@ -20,6 +20,7 @@ public class RandomiserController {
             get("/randomiser", (req,res)->{
                 HashMap<String, Object> model = new HashMap<>();
                 Collections.shuffle(names);
+
                 model.put("names", names.get(0));
                 model.put("template", "names.vtl");
                 return new ModelAndView(model, "layout.vtl");

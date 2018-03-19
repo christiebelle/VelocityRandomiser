@@ -40,4 +40,11 @@ public class TestName {
         public void canFindByIndex() {
             assertEquals("Jason", namelist.get(2));
         }
+
+        @Test
+        public void testRandomiser() {
+
+
+
+    }
 }
