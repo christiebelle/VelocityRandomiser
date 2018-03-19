@@ -7,51 +7,44 @@ import static org.junit.Assert.assertEquals;
 
 public class TestName {
 
-    private ArrayList<String> namelist;
+    private ArrayList<String> testnames;
 
         @Before
         public void before() {
-            namelist = new ArrayList<>();
-            namelist.add("Mark");
-            namelist.add("Gary");
-            namelist.add("Jason");
-            namelist.add("Howard");
-            namelist.add("Robbie");
+            testnames = new ArrayList<>();
+            testnames.add("Mark");
+            testnames.add("Gary");
+            testnames.add("Jason");
+            testnames.add("Howard");
+            testnames.add("Robbie");
         }
 
         @Test
         public void hasNames() {
-            assertEquals(5, namelist.size());
+            assertEquals(5, testnames.size());
         }
 
         @Test
         public void canAddMoreNames() {
-            namelist.add("Take That");
-            assertEquals(6, namelist.size());
+            testnames.add("Take That");
+            assertEquals(6, testnames.size());
         }
 
         @Test
         public void canDeleteNames() {
-            namelist.remove(0);
-            assertEquals(4, namelist.size());
+            testnames.remove(0);
+            assertEquals(4, testnames.size());
         }
 
         @Test
         public void canFindByIndex() {
-            assertEquals("Jason", namelist.get(2));
+            assertEquals("Jason", testnames.get(2));
         }
 
-//        @Test
-//        public void testRandomise() {
-//            String result = null;
-//            ArrayList<String> acceptedvalues = new ArrayList<>();
-//               acceptedvalues.add("Mark");
-//               acceptedvalues.add("Gary");
-//               acceptedvalues.add("Jason");
-//               acceptedvalues.add("Howard");
-//               acceptedvalues.add("Robbie");
-//
-//            result = namelist.randomise();
-//            assertEquals(true, acceptedvalues.contains(result));
-//        }
+        @Test
+        public void testRandomise() {
+            names.randomise();
+
+            assertEquals(true, acceptedvalues.contains());
+        }
 }
