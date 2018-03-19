@@ -27,7 +27,7 @@ public class Name {
         return names.get(index);
     }
 
-    public String randomiser(){
+    public String randomise(){
         Collections.shuffle(names);
         return names.get(0);
     }

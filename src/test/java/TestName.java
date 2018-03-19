@@ -42,7 +42,19 @@ public class TestName {
         }
 
         @Test
-        public void testRandomiser() {
+        public void testRandomise() {
+            String result = null;
+            ArrayList<String> acceptedvalues = new ArrayList<>();
+
+               acceptedvalues.add("Mark");
+               acceptedvalues.add("Gary");
+               acceptedvalues.add("Jason");
+               acceptedvalues.add("Howard");
+               acceptedvalues.add("Robbie");
+
+            result = namelist.randomise();
+            assertEquals(true, acceptedvalues.contains(result));
+        }
 
 
 
