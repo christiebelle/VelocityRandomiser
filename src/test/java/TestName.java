@@ -4,16 +4,14 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class TestName {
 
-    private ArrayList<Name> names;
+    private ArrayList<String> names;
 
         @Before
         public void before() {
-            ArrayList<Name> names = new ArrayList<Name>();
+            ArrayList<String> names = new ArrayList<>();
             names.add("Mark");
             names.add("Gary");
             names.add("Jason");
@@ -40,13 +38,6 @@ public class TestName {
 
         @Test
         public void canFindNameByIndex() {
-            names.get(1);
-            assertEquals("Jason", names.findByIndex());
+            assertEquals("Jason", names.get(1));
         }
-
-
-
-
-
-    }
 }

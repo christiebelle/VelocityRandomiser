@@ -1,23 +1,22 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Name {
 
-    private ArrayList<Name> names;
+    private ArrayList<String> names;
 
     public Name() {
-        ArrayList<Name> names = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
     }
 
-    public ArrayList<Name> getNames() {
+    public ArrayList<String> getNames() {
         return names;
     }
 
-    public void setNames(ArrayList<Name> names) {
+    public void setNames(ArrayList<String> names) {
         this.names = names;
     }
 
-    public Name findByIndex(int index){
+    public String find(int index){
         return names.get(index);
     }
 }
