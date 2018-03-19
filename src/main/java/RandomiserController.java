@@ -20,7 +20,8 @@ public class RandomiserController {
             get("/randomiser", (req,res)->{
                 Name names = new Name();
                 HashMap<String, Object> model = new HashMap<>();
-                model.put("names", names.randomise());
+                String randomname = names.randomise();
+                model.put("name", randomname);
                 model.put("template", "names.vtl");
                 return new ModelAndView(model, "layout.vtl");
             }, velocityTemplateEngine);
