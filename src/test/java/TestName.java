@@ -7,44 +7,39 @@ import static org.junit.Assert.assertEquals;
 
 public class TestName {
 
-    private ArrayList<String> testnames;
+    private Name testnames;
 
         @Before
         public void before() {
-            testnames = new ArrayList<>();
-            testnames.add("Mark");
-            testnames.add("Gary");
-            testnames.add("Jason");
-            testnames.add("Howard");
-            testnames.add("Robbie");
+            testnames = new Name();
         }
 
         @Test
         public void hasNames() {
-            assertEquals(5, testnames.size());
+            assertEquals(6, testnames.getNames().size());
         }
 
         @Test
         public void canAddMoreNames() {
-            testnames.add("Take That");
-            assertEquals(6, testnames.size());
+            testnames.add("Camberwick Green");
+            assertEquals(7, testnames.getNames().size());
         }
 
         @Test
         public void canDeleteNames() {
-            testnames.remove(0);
-            assertEquals(4, testnames.size());
+            testnames.remove("Barney McGrew");
+            assertEquals(5, testnames.getNames().size());
         }
 
         @Test
         public void canFindByIndex() {
-            assertEquals("Jason", testnames.get(2));
+            assertEquals("Barney McGrew", testnames.find(2));
         }
 
         @Test
         public void testRandomise() {
             Name acceptedvalues = new Name();
             String result = acceptedvalues.randomise();
-            assertEquals(true, result.contains(acceptedvalues));
+            assertEquals(true, acceptedvalues.getNames().contains(result));
         }
 }

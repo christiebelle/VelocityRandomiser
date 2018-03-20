@@ -23,6 +23,11 @@ public class Name {
         this.names = names;
     }
 
+    public void add(String name){
+        this.names.add(name);
+    }
+
+
     public String find(int index){
         return names.get(index);
     }
@@ -30,5 +35,9 @@ public class Name {
     public String randomise(){
         Collections.shuffle(names);
         return names.get(0);
+    }
+
+    public void remove(String name) {
+        this.names.remove(name);
     }
 }
